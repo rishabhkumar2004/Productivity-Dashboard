@@ -1,26 +1,100 @@
-@font-face{
-    font-family: light;
-    src: url(./AeonikTRIAL-Light.otf);
+:root {
+  --pri: #F8F4E1;
+  --sec: #381c0a;
+  --tri1: #FEBA17;
+  --tri2: #74512D;
+  --red: red;
+  --green: rgb(9, 138, 89);
+  --blue: rgb(0, 191, 255);
+  --black: black;
 }
-@font-face{
-    font-family: normal;
-    src: url(./AeonikTRIAL-Regular.otf);
+
+@font-face {
+  font-family: aeonik;
+  font-weight: 200;
+  src: url(./AeonikTRIAL-Light.otf);
 }
-@font-face{
-    font-family: bold;
-    src: url(./AeonikTRIAL-Bold.otf);
+@font-face {
+  font-family: aeonik;
+  font-weight: 500;
+  src: url(./AeonikTRIAL-Regular.otf);
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
+@font-face {
+  font-family: aeonik;
+  font-weight: 700;
+  src: url(./AeonikTRIAL-Bold.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: aeonik;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--sec);
+  color: var(--tri2);
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--sec);
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background: var(--tri1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px var(--tri1);
+}
+
+section.allElems {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  padding-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* fixed typo here */
+  gap: 40px;
+}
+
+.elem {
+  background-color: #FEBA17;
+  padding: 30px 40px;
+  font-size: 30px;
+  border-radius: 10px;
+  height: 400px;           /* added missing semicolon */
+  width: 330px;
+  overflow: hidden; 
+  position: relative;
+  transition: all ease 0.2s;
+
+
+
 
 }
-html,
-body{
+
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.elem:active{
+    scale:0.97;
+}
+
+.fullelem{
     height: 100%;
     width: 100%;
+    background-color: #381c0a;
 }
-#main{
 
-}
